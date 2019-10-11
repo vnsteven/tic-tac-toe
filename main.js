@@ -99,7 +99,10 @@ function checkWin() {
       ifWin(circle, scorePlayerY, scoreY, i);
     }
   }
+  checkDraw();
+}
 
+function checkDraw() {
   if (!isDone && turn === 9) {
     symbol.innerHTML = `${circle} ${cross} Match nul !`;
     isDone = true;
