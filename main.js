@@ -1,4 +1,4 @@
-// SELECTOR
+// SELECTORS
 const square = document.querySelectorAll('.case');
 const symbol = document.querySelector('.turn');
 const resetButton = document.querySelector('#reset');
@@ -97,7 +97,12 @@ function checkWin() {
       scorePlayerY++;
       localStorage.setItem('scorePlayerY', scorePlayerY);
       ifWin(circle, scorePlayerY, scoreY, i);
-    } else if (playerX.length === 5 || playerO.length === 5) {
+    } else if (
+      playerX.length === 5 &&
+      playerX.includes(combinations[i][0]) &&
+      playerX.includes(combinations[i][1]) &&
+      playerX.includes(combinations[i][2])
+    ) {
       symbol.innerHTML = `${circle} ${cross} Match nul !`;
       isDone = true;
       resetButton.classList.remove('hidden');
