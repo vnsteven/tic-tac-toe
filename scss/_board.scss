@@ -14,7 +14,7 @@
   }
 
   .button {
-    transform: translateX(-4.8rem);
+    transform: translateX($translate-button);
     border-radius: 10rem;
     background-color: $color-dark;
     font-size: 2rem;
@@ -29,12 +29,12 @@
       box-shadow: 0 0.5rem 1rem rgba(grey, 0.5);
       background-color: $color-light;
       color: $color-dark;
-      transform: translateY(-0.2rem) translateX(-4.8rem);
+      transform: translateY(-0.2rem) translateX($translate-button);
     }
 
     &:active {
       box-shadow: 0 0 0 rgba($color, 1);
-      transform: translateY(0) translateX(-4.8rem);
+      transform: translateY(0) translateX($translate-button);
     }
   }
 }
