@@ -40,6 +40,14 @@ body {
       box-shadow: 0 0 0 #43e1c7;
       transform: translateY(0) translateX(-4.8rem); }
 
+.score {
+  display: flex;
+  padding-top: 3rem;
+  width: 23rem;
+  justify-content: space-between;
+  margin: 0 auto;
+  font-size: 3rem; }
+
 .game .row {
   display: flex;
   justify-content: center; }
@@ -57,11 +65,3 @@ body {
   .game .case:hover {
     cursor: pointer;
     background-color: #91ffed; }
-
-.score {
-  display: flex;
-  padding-top: 3rem;
-  width: 23rem;
-  justify-content: space-between;
-  margin: 0 auto;
-  font-size: 3rem; }

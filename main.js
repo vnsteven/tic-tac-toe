@@ -89,13 +89,13 @@ function checkWin() {
       scorePlayerX++;
       localStorage.setItem('scorePlayerX', scorePlayerX);
       ifWin(cross, scorePlayerX, scoreX, i);
-      localStorage.setItem('scorePlayerX', scorePlayerX);
     } else if (
       playerO.includes(combinations[i][0]) &&
       playerO.includes(combinations[i][1]) &&
       playerO.includes(combinations[i][2])
     ) {
       scorePlayerY++;
+      localStorage.setItem('scorePlayerY', scorePlayerY);
       ifWin(circle, scorePlayerY, scoreY, i);
     } else if (playerX.length === 5 || playerO.length === 5) {
       symbol.innerHTML = `${circle} ${cross} Match nul !`;
