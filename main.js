@@ -81,6 +81,10 @@ function ifWin(playerSymbol, playerScore, scoreCount, index) {
 
 function checkWin() {
   for (let i = 0; i < combinations.length; i++) {
+    console.log(combinations[i]);
+    console.log(playerX.includes(combinations[i][0]))
+    console.log(playerX.includes(combinations[i][1]))
+    console.log(playerX.includes(combinations[i][2]))
     if (
       playerX.includes(combinations[i][0]) &&
       playerX.includes(combinations[i][1]) &&
@@ -99,9 +103,9 @@ function checkWin() {
       ifWin(circle, scorePlayerY, scoreY, i);
     } else if (
       playerX.length === 5 &&
-      playerX.includes(combinations[i][0]) &&
-      playerX.includes(combinations[i][1]) &&
-      playerX.includes(combinations[i][2])
+      (!playerX.includes(combinations[i][0]) ||
+        !playerX.includes(combinations[i][1]) ||
+        !playerX.includes(combinations[i][2]))
     ) {
       symbol.innerHTML = `${circle} ${cross} Match nul !`;
       isDone = true;
