@@ -97,17 +97,14 @@ function checkWin() {
       scorePlayerY++;
       localStorage.setItem('scorePlayerY', scorePlayerY);
       ifWin(circle, scorePlayerY, scoreY, i);
-    } else if (
-      playerX.length === 5 &&
-      (!playerX.includes(combinations[i][0]) ||
-        !playerX.includes(combinations[i][1]) ||
-        !playerX.includes(combinations[i][2]))
-    ) {
-      symbol.innerHTML = `${circle} ${cross} Match nul !`;
-      isDone = true;
-      resetButton.classList.remove('hidden');
-      continueButton.classList.remove('hidden');
     }
+  }
+
+  if (!isDone && turn === 9) {
+    symbol.innerHTML = `${circle} ${cross} Match nul !`;
+    isDone = true;
+    resetButton.classList.remove('hidden');
+    continueButton.classList.remove('hidden');
   }
 }
 
